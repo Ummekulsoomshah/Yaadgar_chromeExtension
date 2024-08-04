@@ -1,0 +1,24 @@
+{
+  "name": "project",
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "nanoid": "3.1.28",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-speech-to-text": "^0.8.0",
+    "react-mde": "11.5.0",
+    "react-split": "2.0.13",
+    "showdown": "1.9.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*",
+    "vite": "latest"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "buid-extension": "npm run build && copy manifest.json",
+    "preview": "vite preview"
+  }
+}
