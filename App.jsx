@@ -24,16 +24,6 @@ export default function App() {
     });
     return unsubscribe;
   }, []);
-  // console.log(notes);
-
-  // const createNewNote = () => {
-  //   const newNote = {
-  //     id: nanoid(),
-  //     body: "# Type your markdown note's title here",
-  //   };
-  //   setNotes((prevNotes) => [newNote, ...prevNotes]);
-  //   setCurrentNoteId(newNote.id);
-  // };
 
   async function createNewNote() {
     const newNote = {
@@ -41,22 +31,13 @@ export default function App() {
     };
 
     const newNoteRef = await addDoc(notesCollection, newNote);
-    // const noteDoc = await getDoc(doc(db, "notes", newNoteRef.id));
-    // const notesData = noteDoc.data();
-    // console.log(notesData);
-    // setNotes((prevNotes) => [
-    //   ...prevNotes,
-    //   { id: noteDoc.id, body: notesData.body },
-    // ]);
+   
     setCurrentNoteId(newNoteRef.id);
   }
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
 
-  // const deleteNote = (noteId) => {
-  //   setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
-  // };
   async function deleteNote(noteId) {
     const docRef = doc(db, "notes", noteId);
     await deleteDoc(docRef);

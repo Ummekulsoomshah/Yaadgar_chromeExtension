@@ -277,6 +277,8 @@ section.dark .toggler--slider {
     background: black;
     color: white;
     position: relative;
+    width: 100%;
+    height: 100vh;
    
 
 }
@@ -336,6 +338,22 @@ section.dark .toggler--slider {
     transform: translate(-50%, -50%);
     animation: moveBlob 2s linear infinite;
 
+  }
+.btndiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+ 
+
+  .btns{
+    border:none;
+    background-color: #195fc7;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
   }
   
   
